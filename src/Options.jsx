@@ -46,6 +46,7 @@ const Options = (props) => {
     const moveBot = () => {
         console.log("Movida bot", Tijera)
         props.setMoveBot(Tijera)
+        props.setResult("")
     };
 
     return (
