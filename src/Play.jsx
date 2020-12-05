@@ -64,11 +64,11 @@ const Play = () => {
           </div>
         </div>
         <div className="component-center">
-          <button onClick={setResult} className="btn btn-outline-info margin-top"> Ver resultado </button>
+          <button onClick={setResult} className="btn btn-outline-danger margin-top"> Ver resultado </button>
           <h1>{resultadoPartida.resultado}</h1>
         </div>
         <div className="component-center">
-          <button onClick={goHome} className="btn btn-outline-info">
+          <button onClick={goHome} className="btn btn-outline-danger">
               Volver a inicio
           </button>
         </div>
