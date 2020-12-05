@@ -45,26 +45,28 @@ const Options = (props) => {
 
     const moveBot = () => {
         console.log("Movida bot", Tijera)
-        props.setMoveBot(Tijera)
+        const random = Math.floor(Math.random() * 5);
+        const plays = [Piedra, Papel, Tijera, Lagarto, Spock]
+        props.setMoveBot(plays[random])
         props.setResult("")
     };
 
     return (
-      <div> 
-        <button type="button" onClick={() => handleClick(Piedra)}>
-          <img src="/PIEDRA.png" style={{width: '5rem'}}/>
+      <div className="container"> 
+        <button type="button" onClick={() => handleClick(Piedra)} className="btn btn-outline-dark imagen-juego">
+          <img src="/PIEDRA.png" style={{width: '10rem'}}/>
         </button>
-        <button onClick={() => handleClick(Papel)}>
-          <img src="/PAPEL.png" style={{width: '5rem'}}/>
+        <button onClick={() => handleClick(Papel)} className="btn btn-outline-secondary imagen-juego">
+          <img src="/PAPEL.png" style={{width: '10rem'}}/>
         </button>
-        <button onClick={() => handleClick(Tijera)}>
-          <img src="/TIJERA.png" style={{width: '5rem'}}/>
+        <button onClick={() => handleClick(Tijera)} className="btn btn-outline-danger imagen-juego">
+          <img src="/TIJERA.png" style={{width: '10rem'}}/>
         </button>
-        <button onClick={() => handleClick(Lagarto)}>
-          <img src="/LAGARTO.png" style={{width: '5rem'}}/>
+        <button onClick={() => handleClick(Lagarto)} className="btn btn-outline-success imagen-juego">
+          <img src="/LAGARTO.png" style={{width: '10rem'}}/>
         </button>
-        <button onClick={() => handleClick(Spock)}>
-          <img src="/SPOCK.png" style={{width: '5rem'}}/>
+        <button onClick={() => handleClick(Spock)} className="btn btn-outline-warning imagen-juego">
+          <img src="/SPOCK.png" style={{width: '10rem'}}/>
         </button>
       </div>
     );

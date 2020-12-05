@@ -20,7 +20,7 @@ const Home = () => {
     return (
       <>
         <h1>Piedra Papel Tijera Lagarto Spock</h1>
-        <div className="input-name">
+        <div className="component-center">
           <input onChange={handleNameChange} placeholder="Ingrese Nombre Jugador" /> 
           <h2>VS Bot</h2>
           <button onClick={handleClick}>

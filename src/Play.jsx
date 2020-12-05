@@ -13,7 +13,11 @@ const Play = () => {
 
     const [moveBot, setMoveBot] = useState({});
 
-    const [resultadoPartida, setResultadoPartida] = useState("");
+    const [resultadoPartida, setResultadoPartida] = useState({
+      resultado: "",
+      eleccionUno: "",
+      eleccionDos: ""
+    });
      
     const goHome = () => {
         history.push("/home")
@@ -22,32 +26,53 @@ const Play = () => {
     const setResult = () => {
       console.log("Jugada player", movePlayer)
       if (movePlayer.fortalezas.includes(moveBot.id)){
-        setResultadoPartida("Gano ".concat(namePlayer))
+        setResultadoPartida({
+          resultado: "Gano ".concat(namePlayer),
+          eleccionPlayer: movePlayer.id,
+          eleccionBot: moveBot.id
+        })
       }
       if(movePlayer.debilidades.includes(moveBot.id)){
-        setResultadoPartida("Gano BOT")
+        setResultadoPartida({
+          resultado: "Gano BOT",
+          eleccionPlayer: movePlayer.id,
+          eleccionBot: moveBot.id
+        })
       }
       if(movePlayer.neutral === moveBot.id){
-        setResultadoPartida("Empate")
+        setResultadoPartida({
+          resultado: "Empate",
+          eleccionPlayer: movePlayer.id,
+          eleccionBot: moveBot.id})
       }
     }
     
     return (
-      <>
-        <h1>Se inicia una nueva partida con {namePlayer}</h1>
+      <div>
+        <div className="component-center">
+          <h1>Se inicia una nueva partida con {namePlayer}</h1>
+        </div>
         <Options setMovePlayer={setMovePlayer} setMoveBot={setMoveBot} setResult={setResultadoPartida}/>
-        <div>
-          <h2>Jugador {namePlayer} eligio {movePlayer.id}</h2>
-          <h2>Bot eligio {moveBot.id}</h2>
+        <div className="elections-center">
+          <div className="margin-top">
+            <h2>{namePlayer} eligio:</h2> 
+            <h2>{resultadoPartida.eleccionPlayer}</h2>
+          </div>
+          <div className="margin-top">
+            <h2>Bot eligio: </h2>
+            <h2>{resultadoPartida.eleccionBot}</h2>
+          </div>
         </div>
-        <div>
-          <button onClick={setResult}> Ver resultado </button>
-          <h2>{resultadoPartida}</h2>
+        <div className="component-center">
+          <button onClick={setResult} className="btn btn-outline-info margin-top"> Ver resultado </button>
+          <h1>{resultadoPartida.resultado}</h1>
         </div>
-        <button onClick={goHome}>
-            Volver a inicio
-        </button>
-      </>
+        <div className="component-center">
+          <button onClick={goHome} className="btn btn-outline-info">
+              Volver a inicio
+          </button>
+        </div>
+      </div>
     );
 }
 
