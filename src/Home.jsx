@@ -31,7 +31,7 @@ const Home = () => {
             </button>
           </div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-4 margin-top">
           <img src="/the-big-bang-theory.png" style={{width: '45rem'}}/>
         </div>
       </div>

@@ -27,21 +27,21 @@ const Play = () => {
       console.log("Jugada player", movePlayer)
       if (movePlayer.fortalezas.includes(moveBot.id)){
         setResultadoPartida({
-          resultado: "Gano ".concat(namePlayer),
+          resultado: "GANO ".concat(namePlayer),
           eleccionPlayer: movePlayer.id,
           eleccionBot: moveBot.id
         })
       }
       if(movePlayer.debilidades.includes(moveBot.id)){
         setResultadoPartida({
-          resultado: "Gano BOT",
+          resultado: "GANO BOT",
           eleccionPlayer: movePlayer.id,
           eleccionBot: moveBot.id
         })
       }
       if(movePlayer.neutral === moveBot.id){
         setResultadoPartida({
-          resultado: "Empate",
+          resultado: "EMPATE",
           eleccionPlayer: movePlayer.id,
           eleccionBot: moveBot.id})
       }
@@ -49,26 +49,30 @@ const Play = () => {
     
     return (
       <div>
-        <div className="component-center">
-          <h1>Se inicia una nueva partida con {namePlayer}</h1>
+        <div className="elections-center">
+          <div className="column component-center">
+            <h2 className="elections-center">{namePlayer}</h2> 
+            <h2 className="elections-center height margin-top">{resultadoPartida.eleccionPlayer}</h2>
+          </div>
+          <div className="column component-center">
+            <h2>VS</h2>
+          </div>
+          <div className="column component-center">
+            <h2 className="elections-center">Bot</h2>
+            <h2 className="elections-center height margin-top">{resultadoPartida.eleccionBot}</h2>
+          </div>
         </div>
         <Options setMovePlayer={setMovePlayer} setMoveBot={setMoveBot} setResult={setResultadoPartida}/>
-        <div className="elections-center">
-          <div className="margin-top">
-            <h2>{namePlayer} eligio:</h2> 
-            <h2>{resultadoPartida.eleccionPlayer}</h2>
+        <div className="component-center">
+          <div className="component-center">
+            <button onClick={setResult} className="btn btn-outline-danger button-size">
+              Ver resultado
+            </button>
           </div>
-          <div className="margin-top">
-            <h2>Bot eligio: </h2>
-            <h2>{resultadoPartida.eleccionBot}</h2>
-          </div>
+          <h1 className="margin height">{resultadoPartida.resultado}</h1>
         </div>
         <div className="component-center">
-          <button onClick={setResult} className="btn btn-outline-danger margin-top"> Ver resultado </button>
-          <h1>{resultadoPartida.resultado}</h1>
-        </div>
-        <div className="component-center">
-          <button onClick={goHome} className="btn btn-outline-danger">
+          <button onClick={goHome} className="btn btn-outline-danger button-size">
               Volver a inicio
           </button>
         </div>

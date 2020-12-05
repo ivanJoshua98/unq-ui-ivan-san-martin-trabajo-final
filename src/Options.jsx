@@ -52,21 +52,21 @@ const Options = (props) => {
     };
 
     return (
-      <div className="container"> 
-        <button type="button" onClick={() => handleClick(Piedra)} className="btn btn-outline-dark imagen-juego">
-          <img src="/PIEDRA.png" style={{width: '10rem'}}/>
+      <div className="elections-center"> 
+        <button type="button" onClick={() => handleClick(Piedra)} className="btn btn-outline-dark transparent">
+          <img src="/PIEDRA.png" className="image-size"/>
         </button>
-        <button onClick={() => handleClick(Papel)} className="btn btn-outline-secondary imagen-juego">
-          <img src="/PAPEL.png" style={{width: '10rem'}}/>
+        <button onClick={() => handleClick(Papel)} className="btn btn-outline-secondary transparent">
+          <img src="/PAPEL.png" className="image-size"/>
         </button>
-        <button onClick={() => handleClick(Tijera)} className="btn btn-outline-danger imagen-juego">
-          <img src="/TIJERA.png" style={{width: '10rem'}}/>
+        <button onClick={() => handleClick(Tijera)} className="btn btn-outline-danger transparent">
+          <img src="/TIJERA.png" className="image-size"/>
         </button>
-        <button onClick={() => handleClick(Lagarto)} className="btn btn-outline-success imagen-juego">
-          <img src="/LAGARTO.png" style={{width: '10rem'}}/>
+        <button onClick={() => handleClick(Lagarto)} className="btn btn-outline-success transparent">
+          <img src="/LAGARTO.png" className="image-size"/>
         </button>
-        <button onClick={() => handleClick(Spock)} className="btn btn-outline-warning imagen-juego">
-          <img src="/SPOCK.png" style={{width: '10rem'}}/>
+        <button onClick={() => handleClick(Spock)} className="btn btn-outline-warning transparent">
+          <img src="/SPOCK.png" className="image-size"/>
         </button>
       </div>
     );

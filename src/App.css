@@ -2,13 +2,25 @@ body{
   background-color: whitesmoke;
 }
 
-.imagen-juego{
+.transparent{
   border: none;
   margin: 1rem;
 }
 
-.margin-top{
+.image-size{
+  width: 10rem;
+}
+
+.margin{
   margin: 1rem;
+}
+
+.height{
+  height: 3rem;
+}
+
+.margin-top{
+  margin-top: 2rem;
 }
 
 .component-center{
@@ -17,15 +29,9 @@ body{
   margin: 1rem;
 }
 
-.jugadas{
-  display: inline-grid;
-  margin: 1rem;
-}
-
 .elections-center{  
   display: flex;
   justify-content: center;
-  margin: 1rem;
 }
 
 .main{
@@ -38,4 +44,13 @@ body{
   border-color: black;
   border-radius: 5mm;
   border-width: 1px;
+}
+
+.column {
+  width: 30%;
+  padding: 10px;
+}
+
+.button-size{
+  width: 10rem;
 }
