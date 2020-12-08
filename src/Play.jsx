@@ -9,6 +9,11 @@ const Play = () => {
 
     const namePlayer = localStorage.getItem("namePlayer");    
 
+    const [points, setPoints] = useState({
+      jugadorUno: 0,
+      jugadorDos: 0
+    })
+
     const [movePlayer, setMovePlayer] = useState({});
 
     const [moveBot, setMoveBot] = useState({});
@@ -31,6 +36,11 @@ const Play = () => {
           eleccionPlayer: movePlayer.id,
           eleccionBot: moveBot.id
         })
+        setPoints({
+          jugadorUno: points.jugadorUno + 1,
+          jugadorDos: points.jugadorDos
+        })
+        console.log("Puntos jugadorUno:", points.jugadorUno,"Puntos jugadorDos: ", points.jugadorDos)
       }
       if(movePlayer.debilidades.includes(moveBot.id)){
         setResultadoPartida({
@@ -38,6 +48,11 @@ const Play = () => {
           eleccionPlayer: movePlayer.id,
           eleccionBot: moveBot.id
         })
+        setPoints({
+          jugadorUno: points.jugadorUno,
+          jugadorDos: points.jugadorDos + 1
+        })
+        console.log("Puntos jugadorUno:", points.jugadorUno,"Puntos jugadorDos: ", points.jugadorDos)
       }
       if(movePlayer.neutral === moveBot.id){
         setResultadoPartida({
@@ -54,8 +69,8 @@ const Play = () => {
             <h2 className="elections-center">{namePlayer}</h2> 
             <h2 className="elections-center height margin-top">{resultadoPartida.eleccionPlayer}</h2>
           </div>
-          <div className="column component-center">
-            <h2>VS</h2>
+          <div className="column">
+            <h2 className="component-center">VS</h2>
           </div>
           <div className="column component-center">
             <h2 className="elections-center">Bot</h2>
@@ -63,13 +78,21 @@ const Play = () => {
           </div>
         </div>
         <Options setMovePlayer={setMovePlayer} setMoveBot={setMoveBot} setResult={setResultadoPartida}/>
-        <div className="component-center">
-          <div className="component-center">
-            <button onClick={setResult} className="btn btn-outline-danger button-size">
-              Ver resultado
-            </button>
+        <div className="elections-center">
+          <div className="column component-center">
+            <h1>{points.jugadorUno}</h1>
           </div>
-          <h1 className="margin height">{resultadoPartida.resultado}</h1>
+          <div className="column component-center">
+            <div className="component-center">
+              <button onClick={setResult} className="btn btn-outline-danger button-size">
+                Ver resultado
+              </button>
+            </div>  
+            <h1 className="margin height">{resultadoPartida.resultado}</h1>
+          </div>
+          <div className="column component-center">
+              <h1>{points.jugadorDos}</h1>
+          </div>
         </div>
         <div className="component-center">
           <button onClick={goHome} className="btn btn-outline-danger button-size">
