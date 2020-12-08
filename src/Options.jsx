@@ -52,6 +52,10 @@ const Options = (props) => {
     };
 
     return (
+      <>
+      <div className="component-center">
+        <a>Elige una opcion</a>
+      </div>
       <div className="elections-center"> 
         <button type="button" onClick={() => handleClick(Piedra)} className="btn btn-outline-dark transparent">
           <img src="/PIEDRA.png" className="image-size"/>
@@ -69,6 +73,7 @@ const Options = (props) => {
           <img src="/SPOCK.png" className="image-size"/>
         </button>
       </div>
+      </>
     );
 }
 
