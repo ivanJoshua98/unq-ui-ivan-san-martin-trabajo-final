@@ -84,7 +84,7 @@ const Play = () => {
           </div>
           <div className="column component-center">
             <div className="component-center">
-              <button onClick={setResult} className="btn btn-outline-danger button-size">
+              <button onClick={setResult} disabled={!movePlayer.id} className="btn btn-outline-danger button-size">
                 Ver resultado
               </button>
             </div>  
