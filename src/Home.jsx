@@ -7,14 +7,24 @@ const Home = () => {
     const history = useHistory();
 
     const [namePlayer, setNamePlayer] = useState("");   
+
+    const [error, setError] = useState("");
     
     const handleNameChange = (event) => {
       setNamePlayer(event.target.value)
+      setError("")
       localStorage.setItem("namePlayer", namePlayer);
     };  
     
     const handleClick = () => {
+      if(namePlayer.length === 0){
+        setError(
+          <a className="alert alert-danger margin-top">Ingrese algun nombre</a>
+        )
+      }
+      else {
         history.push("/play")
+      }
     };   
     
     return (
@@ -24,6 +34,7 @@ const Home = () => {
               <h1 className="component-center">Piedra Papel Tijera</h1>
               <h1 className="component-center">Lagarto Spock</h1>
             <div className="component-center">
+              {error}
               <input onChange={handleNameChange} placeholder="Ingrese nombre jugador" className="form-control margin-top"/> 
               <button onClick={handleClick} className="btn btn-outline-danger margin">
                   Iniciar Partida
