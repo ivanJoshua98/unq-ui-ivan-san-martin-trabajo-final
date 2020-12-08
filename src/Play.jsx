@@ -60,6 +60,7 @@ const Play = () => {
           eleccionPlayer: movePlayer.id,
           eleccionBot: moveBot.id})
       }
+      setMovePlayer({})
     }
     
     return (
