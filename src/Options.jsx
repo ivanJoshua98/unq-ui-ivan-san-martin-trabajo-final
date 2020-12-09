@@ -1,38 +1,38 @@
 import './App.css';
 
 const Piedra = {
-    id: "Piedra",
-    debilidades: ["Papel", "Spock"],
-    fortalezas: ["Tijera", "Lagarto"],
-    neutral: "Piedra"
+    id: "PIEDRA",
+    debilidades: ["PAPEL", "SPOCK"],
+    fortalezas: ["TIJERA", "LAGARTO"],
+    neutral: "PIEDRA"
   };
   
   const Papel = {
-    id: "Papel",
-    debilidades: ["Tijera", "Lagarto"],
-    fortalezas: ["Piedra", "Spock"],
+    id: "PAPEL",
+    debilidades: ["TIJERA", "LAGARTO"],
+    fortalezas: ["PIEDRA", "SPOCK"],
     neutral: "Papel"
   };
   
   const Tijera = {
-    id: "Tijera",
-    debilidades: ["Piedra", "Spock"],
-    fortalezas: ["Papel", "Lagarto"],
-    neutral: "Tijera"
+    id: "TIJERA",
+    debilidades: ["PIEDRA", "SPOCK"],
+    fortalezas: ["PAPEL", "LAGARTO"],
+    neutral: "TIJERA"
   };
   
   const Spock = {
-    id: "Spock",
-    debilidades:["Papel", "Lagarto"],
-    fortalezas: ["Piedra", "Tijera"],
-    neutral: "Spock"
+    id: "SPOCK",
+    debilidades:["PAPEL", "LAGARTO"],
+    fortalezas: ["PIEDRA", "TIJERA"],
+    neutral: "SPOCK"
   };
   
   const Lagarto = {
-    id: "Lagarto",
-    debilidades: ["Piedra", "Tijera"],
-    fortalezas: ["Papel", "Spock"],
-    neutral: "Lagarto"
+    id: "LAGARTO",
+    debilidades: ["PIEDRA", "TIJERA"],
+    fortalezas: ["PAPEL", "SPOCK"],
+    neutral: "LAGARTO"
   };
 
 const Options = (props) => {

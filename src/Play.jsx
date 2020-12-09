@@ -62,7 +62,7 @@ const Play = () => {
         <div className="elections-center">
           <div className="column component-center">
             <h2 className="elections-center margin-top">{namePlayer}</h2> 
-            <h2 className="elections-center height margin-top">{resultadoPartida.eleccionPlayer}</h2>
+            <h2 className="elections-center height margin-top red">{resultadoPartida.eleccionPlayer}</h2>
           </div>
           <div className="column component-center">
             <img src="/LogoJuego.png" style={{width: '12rem'}} className="component-center"/>
@@ -70,7 +70,7 @@ const Play = () => {
           </div>
           <div className="column component-center">
             <h2 className="elections-center margin-top">Bot</h2>
-            <h2 className="elections-center height margin-top">{resultadoPartida.eleccionBot}</h2>
+            <h2 className="elections-center height margin-top red">{resultadoPartida.eleccionBot}</h2>
           </div>
         </div>
         <Options setMovePlayer={setMovePlayer} setMoveBot={setMoveBot} setResult={setResultadoPartida}/>
