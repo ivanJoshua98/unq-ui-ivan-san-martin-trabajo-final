@@ -31,8 +31,7 @@ const Home = () => {
       <div className="container" style={{padding: '25px 10px'}}>
         <div className="row">
           <div className=" col-md-4 main">
-              <h1 className="component-center">Piedra Papel Tijera</h1>
-              <h1 className="component-center">Lagarto Spock</h1>
+            <img src="/LogoJuego.png" style={{width: '20rem'}} className="component-center"/>
             <div className="component-center">
               {error}
               <input type="text" value={namePlayer} onChange={handleNameChange} placeholder="Ingrese nombre jugador" className="form-control margin-top"/> 
