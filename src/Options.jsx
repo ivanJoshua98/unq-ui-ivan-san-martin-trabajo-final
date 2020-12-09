@@ -53,9 +53,6 @@ const Options = (props) => {
 
     return (
       <>
-      <div className="component-center">
-        <a>Elige una opcion</a>
-      </div>
       <div className="elections-center"> 
         <button type="button" onClick={() => handleClick(Piedra)} className="btn btn-outline-dark transparent margin-right margin-left">
           <img src="/PIEDRA.png" className="image-size"/>

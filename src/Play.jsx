@@ -22,6 +22,8 @@ const Play = () => {
       moveBot: ""
     });
 
+    const [textHelp, setTextHelp] = useState("Elige una opción")
+
     const setResult = () => {
       console.log("Jugada player", movePlayer)
       if (movePlayer.fortalezas.includes(moveBot.id)){
@@ -55,6 +57,7 @@ const Play = () => {
           moveBot: moveBot.id})
       }
       setMovePlayer({})
+      setTextHelp("Vuelve a intentarlo. Elige una opción")
     }
     
     return (
@@ -72,6 +75,9 @@ const Play = () => {
             <h2 className="elections-center margin-top">Bot</h2>
             <h2 className="elections-center height margin-top red">{matchResult.moveBot}</h2>
           </div>
+        </div>
+        <div className="component-center">
+          <a>{textHelp}</a>
         </div>
         <Options setMovePlayer={setMovePlayer} setMoveBot={setMoveBot} setResult={setMatchResult}/>
         <div className="elections-center">
