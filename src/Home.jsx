@@ -13,7 +13,6 @@ const Home = () => {
     const handleNameChange = (event) => {
       setNamePlayer(event.target.value)
       setError("")
-      localStorage.setItem("namePlayer", namePlayer);
     };  
     
     const handleClick = () => {
@@ -23,6 +22,7 @@ const Home = () => {
         )
       }
       else {
+        localStorage.setItem("namePlayer", namePlayer);
         history.push("/play")
       }
     };   

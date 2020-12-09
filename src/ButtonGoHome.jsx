@@ -7,6 +7,7 @@ const ButtonGoHome = () => {
 
     const goHome = () => {
         history.push("/home")
+        localStorage.removeItem("namePlayer")
     };
 
     return (
