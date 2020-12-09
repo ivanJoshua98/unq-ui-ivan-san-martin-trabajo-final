@@ -61,14 +61,15 @@ const Play = () => {
       <>
         <div className="elections-center">
           <div className="column component-center">
-            <h2 className="elections-center">{namePlayer}</h2> 
+            <h2 className="elections-center margin-top">{namePlayer}</h2> 
             <h2 className="elections-center height margin-top">{resultadoPartida.eleccionPlayer}</h2>
           </div>
-          <div className="column">
+          <div className="column component-center">
+            <img src="/LogoJuego.png" style={{width: '12rem'}} className="component-center"/>
             <h2 className="component-center">VS</h2>
           </div>
           <div className="column component-center">
-            <h2 className="elections-center">Bot</h2>
+            <h2 className="elections-center margin-top">Bot</h2>
             <h2 className="elections-center height margin-top">{resultadoPartida.eleccionBot}</h2>
           </div>
         </div>

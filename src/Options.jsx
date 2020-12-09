@@ -57,19 +57,19 @@ const Options = (props) => {
         <a>Elige una opcion</a>
       </div>
       <div className="elections-center"> 
-        <button type="button" onClick={() => handleClick(Piedra)} className="btn btn-outline-dark transparent">
+        <button type="button" onClick={() => handleClick(Piedra)} className="btn btn-outline-dark transparent margin-right margin-left">
           <img src="/PIEDRA.png" className="image-size"/>
         </button>
-        <button onClick={() => handleClick(Papel)} className="btn btn-outline-secondary transparent">
+        <button onClick={() => handleClick(Papel)} className="btn btn-outline-secondary transparent margin-right">
           <img src="/PAPEL.png" className="image-size"/>
         </button>
-        <button onClick={() => handleClick(Tijera)} className="btn btn-outline-danger transparent">
+        <button onClick={() => handleClick(Tijera)} className="btn btn-outline-danger transparent margin-right">
           <img src="/TIJERA.png" className="image-size"/>
         </button>
-        <button onClick={() => handleClick(Lagarto)} className="btn btn-outline-success transparent">
+        <button onClick={() => handleClick(Lagarto)} className="btn btn-outline-success transparent margin-right">
           <img src="/LAGARTO.png" className="image-size"/>
         </button>
-        <button onClick={() => handleClick(Spock)} className="btn btn-outline-warning transparent">
+        <button onClick={() => handleClick(Spock)} className="btn btn-outline-warning transparent margin-right">
           <img src="/SPOCK.png" className="image-size"/>
         </button>
       </div>
