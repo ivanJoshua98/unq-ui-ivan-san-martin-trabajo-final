@@ -35,7 +35,7 @@ const Home = () => {
               <h1 className="component-center">Lagarto Spock</h1>
             <div className="component-center">
               {error}
-              <input onChange={handleNameChange} placeholder="Ingrese nombre jugador" className="form-control margin-top"/> 
+              <input type="text" value={namePlayer} onChange={handleNameChange} placeholder="Ingrese nombre jugador" className="form-control margin-top"/> 
               <button onClick={handleClick} className="btn btn-outline-danger margin">
                   Iniciar Partida
               </button>
