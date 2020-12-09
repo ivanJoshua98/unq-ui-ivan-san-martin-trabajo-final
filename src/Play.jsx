@@ -1,11 +1,9 @@
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
 import './App.css';
+import ButtonGoHome from './ButtonGoHome';
 import Options from './Options';
 
 const Play = () => {
-
-    const history = useHistory();
 
     const namePlayer = localStorage.getItem("namePlayer");    
 
@@ -23,10 +21,6 @@ const Play = () => {
       eleccionUno: "",
       eleccionDos: ""
     });
-     
-    const goHome = () => {
-        history.push("/home")
-    };
 
     const setResult = () => {
       console.log("Jugada player", movePlayer)
@@ -64,7 +58,7 @@ const Play = () => {
     }
     
     return (
-      <div>
+      <>
         <div className="elections-center">
           <div className="column component-center">
             <h2 className="elections-center">{namePlayer}</h2> 
@@ -95,12 +89,8 @@ const Play = () => {
               <h1>{points.jugadorDos}</h1>
           </div>
         </div>
-        <div className="component-center">
-          <button onClick={goHome} className="btn btn-outline-danger button-size">
-              Volver a inicio
-          </button>
-        </div>
-      </div>
+        <ButtonGoHome/>
+      </>
     );
 }
 

@@ -26,7 +26,7 @@ body{
 .component-center{
   display: grid;
   justify-content: center;
-  margin: 5px;
+  margin: 8px;
 }
 
 .elections-center{  
@@ -53,4 +53,14 @@ body{
 
 .button-size{
   width: 10rem;
+}
+
+.black{
+  font-weight: bold;
+  color: black;
+}
+
+.red{
+  font-weight: bold;
+  color: #dc3545;
 }
