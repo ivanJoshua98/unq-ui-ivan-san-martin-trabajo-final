@@ -1,6 +1,6 @@
 import './App.css';
 import { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 
 const Home = () => {
 
@@ -39,6 +39,9 @@ const Home = () => {
               <button onClick={handleClick} className="btn btn-outline-danger margin">
                   Iniciar Partida
               </button>
+              <div className="component-center">
+                <Link to={"/rules"}>Reglas del juego</Link>
+              </div>
             </div>
           </div>
           <div className="col-md-4 margin-top">
