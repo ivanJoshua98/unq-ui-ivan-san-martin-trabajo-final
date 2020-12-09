@@ -57,7 +57,7 @@ const Play = () => {
           moveBot: moveBot.id})
       }
       setMovePlayer({})
-      setTextHelp("Vuelve a intentarlo. Elige una opción")
+      setTextHelp("¡Vuelve a intentarlo! Elige una opción")
     }
     
     return (
